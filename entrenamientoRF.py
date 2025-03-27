@@ -26,11 +26,15 @@ for nameDir in peopleList:
 # print('labels= ',labels)
 # print('Numero de 0 = ',np.count_nonzero(np.array(labels)==0))
 # print('Numero de 1 = ',np.count_nonzero(np.array(labels)==1))
-face_recognizer = cv2.face.EigenFaceRecognizer_create()
+
+# face_recognizer = cv2.face.EigenFaceRecognizer_create() 
+face_recognizer = cv2.face.FisherFaceRecognizer_create()
 
 print('Entrenando... ')
 face_recognizer.train(facesData, np.array(labels))
 
-face_recognizer.write('modeloEigenFace.xml')
+# face_recognizer.write('modeloEigenFace.xml')
+face_recognizer.write('modeloFisherFace.xml')
+
 print('Modelo almacenado...')
 cv2.destroyAllWindows()

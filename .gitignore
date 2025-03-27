@@ -1,3 +1,4 @@
 tests/
 data/
 modeloEigenFace.xml
+modeloFisherFace.xml
