@@ -2,9 +2,9 @@ import cv2
 import os
 import numpy as np
 
-dataPath = 'C:/Users/porti/Documents/Reconocimiento/Data'
+dataPath = './data'
 peopleList = os.listdir(dataPath)
-print('Lista de personas registrada: ',peopleList)
+print('Lista de personas registradas para entrenamiento: ',peopleList)
 
 labels = []
 facesData = []
@@ -12,7 +12,7 @@ label = 0
 
 for nameDir in peopleList:
     personPath = dataPath + '/' + nameDir
-    print('leyendo las imagenes')
+    print('leyendo todas las imagenes')
 
     for fileName in os.listdir(personPath):
         print('Rosotros: ', nameDir + '/' + fileName)

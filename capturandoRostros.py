@@ -3,7 +3,7 @@ import os
 import imutils
 
 personName = 'Plinio'
-dataPath = 'C:/Users/porti/Documents/Reconocimiento/Data'
+dataPath = './data'
 personPath = dataPath + '/' + personName
 
 if not os.path.exists(personPath):
@@ -33,7 +33,7 @@ while True:
     cv2.imshow('frame',frame)
     
     k = cv2.waitKey(1)
-    if k ==27 or count >= 300:
+    if k ==27 or count >= 500:
         break
 
 cap.release()
