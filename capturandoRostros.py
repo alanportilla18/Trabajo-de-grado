@@ -1,7 +1,7 @@
 import cv2
 import os
 import imutils
-
+#hola prueba
 personName = 'Plinio'
 dataPath = './data'
 personPath = dataPath + '/' + personName
